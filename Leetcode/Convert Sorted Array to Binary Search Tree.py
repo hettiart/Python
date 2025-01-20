@@ -1,0 +1,18 @@
+# Definition for a binary tree node.                                        # This line is a comment indicating the start of a node definition for a binary tree
+# class TreeNode:                                                           # This line defines a class named TreeNode which will represent individual nodes in the binary tree.
+#     def __init__(self, val=0, left=None, right=None):                     # This line defines the constructor (__init__) for the TreeNode class. It takes three parameters:
+                                                                            # val: The value to be stored in the node (defaulting to 0).
+                                                                            # left: A reference to the left child node (defaulting to None).
+                                                                            # right: A reference to the right child node (defaulting to None).
+#         self.val = val                                                    # This line initializes the val attribute of the node with the provided val parameter.
+#         self.left = left                                                  # This line initializes the left attribute of the node with the provided left parameter.
+#         self.right = right                                                # This line initializes the right attribute of the node with the provided right parameter.
+class Solution:                                                             # This line defines a class named Solution which will contain the function for converting the array.
+    def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:      # This line defines a method within the Solution class called sortedArrayToBST. It takes a list of integers (nums) as input and returns an optional TreeNode representing the root of the constructed binary search tree.
+        if not nums:                                                        # This line checks if the input list (nums) is empty. If it is, the function returns None, indicating an empty tree.
+            return None                                                     # This line returns None if the input list is empty.
+        mid = len(nums) // 2                                                # This line calculates the middle index (mid) of the input list using integer division (//). This ensures that the middle element is chosen when the length of the list is odd.
+        root = TreeNode(val=nums[mid])                                      # This line creates a new TreeNode object named root and initializes it with the value of the element at the middle index (mid) of the input list. This node will be the root of the resulting binary search tree.
+        root.left = self.sortedArrayToBST(nums[:mid])                       # This line recursively calls the sortedArrayToBST function with the left half of the input list (nums[:mid]). The result (a TreeNode representing the left subtree) is assigned to the left attribute of the root node.         
+        root.right = self.sortedArrayToBST(nums[mid+1:])                    # This line recursively calls the sortedArrayToBST function with the right half of the input list (nums[mid+1:]). The result (a TreeNode representing the right subtree) is assigned to the right attribute of the root node.
+        return root                                                         # This line returns the root node, which is the root of the constructed binary search tree.
