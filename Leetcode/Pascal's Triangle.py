@@ -14,4 +14,9 @@ class Solution:
 
         return res                                   #  This line returns the res list, which now contains all the rows of Pascal's Triangle up to numRows.
     
+<<<<<<< HEAD
 # https://www.youtube.com/watch?v=nPVEaB3AjUM
+=======
+
+
+>>>>>>> b9a4759ec8e5d6ed27f81fd969cd2e3ff5c87c43
