@@ -10,3 +10,5 @@ class Solution:
                 next_row[j+1] += res[j]
             res = next_row                      # This line updates the res list to be equal to the next_row list. This effectively moves to the next row in the triangle.
         return res                              # This line returns the res list, which now contains the elements of the specified row in Pascal's Triangle.
+    
+    # https://www.youtube.com/watch?v=k1DNTyal77I
