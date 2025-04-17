@@ -26,8 +26,8 @@ km_result_label= Label(text="0")
 km_result_label.grid(column=1, row=1)
 
 #Label
-Km_label = Label(text="Km")
-Km_label.grid(column=3, row=1)
+km_label = Label(text="Km")
+km_label.grid(column=3, row=1)
 
 #Button
 button = Button(text="Calculate", command=button_clicked)
